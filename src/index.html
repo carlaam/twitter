@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h3>TWITTER</h3>
+    </header>
+    <main class="main">
+        <aside class="profile">
+            <figure>
+                <img src="" alt="">
+            </figure>
+            <p>Nome
+                @
+            </p>
+            <ul>
+                <li class="profile-list">Tweets</li>
+                <li class="profile-list">Seguindo</li>
+                <li class="profile-list">Seguidores</li>
+            </ul>
+        </aside>
+        <section class="central-container">
+            <form class="tweet-box">
+                <textarea id="text-tweet" class="input-text" placeholder="O que está acontecendo?"></textarea>
+                <input type="button" id="tweet-button" class="button" value="Tweetar">
+                <span id="counter">140</span>
+            </form>
+            <section id="tweets-section" class="tweets-section">
+            </section>
+        </section>
+    </main>
+    <script src="twitter.js"></script>
+</body>
+
+</html>
