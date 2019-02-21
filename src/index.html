@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="img/twitter.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
                 <div class="figure">
                     <img class='profile-picture' src="img/perfil-twitter.png" alt="">
                 </div>
-                <div class="mais-um-div">
+                <div class="user">
                     <h4 class="profile-name">Carla Martins</h4>
                     <h5 class="profile-user">@carlaam</h5>
                 </div>
@@ -42,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="blablabla">
+            <div class="trend-topics">
                 <h4 class="side-bar-header">Assuntos para você</h4>
                 <article>
                     <a class="news font-color-blue" href="#">#GirlPower</a>
@@ -64,7 +63,7 @@
                 <form class="tweet-box">
                     <textarea id="text-tweet" class="input-text" placeholder="O que está acontecendo?"></textarea>
                     <div class="button-character">
-                        <input type="button" id="tweet-button" class="button button-tweet" value="Tweetar">
+                        <input type="button" id="tweet-button" class="button-tweet button font-weight-bold" value="Tweetar">
                         <span id="counter" class="font-color-blue">140</span>
                     </div>
                 </form>
@@ -83,19 +82,19 @@
                                 <h3 class="profile-name">Laboratoria</h3>
                             </a>
                             <p class="profile-name font-color-gray">@laboratoriala</p>
-                            <button class="button follow-button font-color-blue">Seguir</button>
+                            <button class="button follow-button font-weight-bold font-color-blue">Seguir</button>
                         </div>
                     </article>
                     <article class="follow">
                         <div>
-                            <img class='profile-picture-tweet' src="img/0SZnA63e_400x400.jpg" alt="">
+                            <img class='profile-picture-tweet' src="img/front-end-br.jpg" alt="">
                         </div>
                         <div class="follow-links">
                             <a class="news" href="https://twitter.com/frontendbr">
                                 <h3 class="profile-name">Front-End BR</h3>
                             </a>
                             <p class="profile-name font-color-gray">@frontendbr</p>
-                            <button class="button follow-button font-color-blue">Seguir</button>
+                            <button class="button font-weight-bold follow-button font-color-blue">Seguir</button>
                         </div>
                     </article>
                     <article class="follow">
@@ -107,13 +106,14 @@
                                 <h3 class="profile-name">JavaScript</h3>
                             </a>
                             <p class="profile-name font-color-gray">@JavaScript</p>
-                            <button class=" button follow-button font-color-blue">Seguir</button>
+                            <button class="button follow-button font-weight-bold font-color-blue">Seguir</button>
                         </div>
                     </article>
                 </div>
             </aside>
     </div>
     <script src="twitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
 </body>
 
 </html>

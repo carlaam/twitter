@@ -1,6 +1,7 @@
 
-const button = document.querySelector("#tweet-button");
+let button = document.querySelector("#tweet-button");
 let tweet = document.querySelector("#text-tweet");
+let tweetCount = 0;
 
 tweet.addEventListener("input", characterCount);
 tweet.addEventListener("keydown", resizeTextArea);
@@ -8,49 +9,48 @@ tweet.addEventListener("keydown", resizeTextArea);
 button.addEventListener("click", postTweet);
 button.disabled = true;
 
-function checkButton(value) {
+function disableButton(value) {
     button.disabled = value;
 }
 
 function resizeTextArea() {
     tweet.style.height = '12px';
     tweet.style.height = tweet.scrollHeight + 12 + 'px';
+    tweet.rows += 1;
 }
 
 function characterCount() {
 
     let count = tweet.value.length;
     let maxCharacter = 140;
-
     let atual = maxCharacter - count;
 
-    const contador = document.querySelector("#counter");
-
+    let contador = document.querySelector("#counter");
     contador.innerHTML = atual;
-
-    if(atual >= 0 && atual <=9) {
-        document.querySelector("#counter").className = 'font-color-red';
-    }else if(atual >= 10 && atual <= 21){
-        document.querySelector("#counter").className = 'font-color-yellow';
-    }else if (atual >= 22 && atual <= 140){
+ 
+     
+    if(count === 0){
+        disableButton(true);
+        document.querySelector('#counter').className = 'font-color-blue';
+    }else if (count > 0 && count <= 120){
+        disableButton(false);
         document.querySelector("#counter").className = 'font-color-blue';
-    }else{
+    }else if(count >= 121 && count <= 130){
+        document.querySelector("#counter").className = 'font-color-yellow';
+        disableButton(false);
+    }  else if (count >= 131 && count <= 140){
         document.querySelector('#counter').className = 'font-color-red';
-    }
-
-if (count > 0 && count <= 120) {
-        checkButton(false);
-    }else if (count >= 121 && count <= 130) {
-            checkButton(false);
-    } else if (count >= 131 && count <= 140) {
-        checkButton(false);
-    } else {
-        checkButton(true);
+        disableButton(false)
+    }else{
+        disableButton(true);
+        document.querySelector('#counter').className = 'font-color-red';
     }
 }
 
 
 function postTweet() {
+
+    console.log("entrou na post tweet");
 
     let article = document.createElement("article");
     let content = document.createElement("div");
@@ -60,24 +60,24 @@ function postTweet() {
     let image = document.createElement("img");
     let parag = document.createElement("p");
     let time = document.createElement("span");
-    let texto = document.createTextNode(tweet.value);
-    let hora = document.createTextNode(getCurrentTime());
+    let tweetText = document.createTextNode(tweet.value);
+    let postTime = document.createTextNode(getCurrentTime());
     let userName = document.createTextNode('Carla Martins');
     let userlink = document.createTextNode('@carlaam - ');
 
 
     link.href = "#";
-    linkuser.href = "#";
+    linkuser.href = "#tweet"
     image.src="img/foto-tweet.png";
 
     link.appendChild(userName);
     linkuser.appendChild(userlink);
-    parag.appendChild(texto);
+    parag.appendChild(tweetText);
     header.appendChild(link);
     header.appendChild(linkuser);
     article.appendChild(header);
     article.appendChild(parag);
-    time.appendChild(hora);
+    time.appendChild(postTime);
     header.appendChild(time);
     content.appendChild(image);
     content.appendChild(article);
@@ -93,7 +93,7 @@ function postTweet() {
     clearTweetBox();
     characterCount();
     resizeTextArea();
-    tweetCount()
+    tweetCounter()
 }
 
 function clearTweetBox() {
@@ -107,11 +107,9 @@ function getCurrentTime(){
    return time;
 }
 
-let atual = 0;
+function tweetCounter(){
 
-function tweetCount(){
-
-    let contador = document.querySelector("#tweet-number");
-    atual += 1;
-    contador.innerHTML = atual;
+    let counter = document.querySelector("#tweet-number");
+    tweetCount += 1;
+    counter.innerHTML = atual;
 }

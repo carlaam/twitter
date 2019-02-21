@@ -98,7 +98,8 @@ display: flex;
 }
 
 p{
-    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
     white-space: pre-wrap;
     font-size: 13px;
     margin-top: 5px;
@@ -140,16 +141,27 @@ p{
     border-radius: 50%;
 }
 .button{
-    width: 60px;
+    width: 70px;
     height: 35px;
     border: none;
     border-radius: 30px;
     outline: none;
 }
 
-.button-tweet{
+.font-weight-bold{
+    font-weight: 600;
+}
+
+.button-tweet:enabled{
     background-color: #4ab3f4;
     color: #ffffff;
+    cursor: pointer;
+}
+
+.button-tweet:disabled{
+    background-color: #b9e1fa;
+    color: #eff8fe;
+    cursor: not-allowed;
 }
 
 .tweets-section{
@@ -174,7 +186,7 @@ p{
 margin: 0px;
 }
 
-.blablabla{
+.trend-topics{
     margin-top: 10px;
     background-color: #ffffff;
 }
@@ -221,7 +233,7 @@ margin: 0px;
     top: 23%;
 }
 
-.mais-um-div{
+.user{
     position: relative;
     left: 32%;
 }
@@ -253,6 +265,12 @@ padding-top: 5px;
     border: 0.5px solid #4ab3f4;
     width: 10vw;
     margin-left: 5px;
+}
+
+.follow-button:hover{
+    background-color: #b9e1fa;
+    cursor: pointer;
+
 }
 
 .follow{
