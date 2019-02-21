@@ -194,8 +194,7 @@ margin: 0px;
 .aside-left{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    margin: 10px;
+    margin: 10px 0;
     margin-left: 10%;
 }
 
