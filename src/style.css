@@ -28,7 +28,7 @@ display: flex;
 }
 
 .tweet-time{
-    margin-left:3px; 
+    margin: 1px 0 0 3px;
     color: #657786;
     font-size: 13px;
     font-family: Helvetica, Sans-Serif;
@@ -60,7 +60,7 @@ display: flex;
 .profile{
     width: 285px;
     height: 215px;
-    background-image: url("img/bg_dashboard.png")
+    background-image: url("../img/bg_dashboard.png")
     
 }
 
@@ -94,7 +94,6 @@ display: flex;
     font-family: Helvetica, Sans-Serif;
     vertical-align: middle;
     padding-top: 10px;
-    
 }
 
 p{
@@ -109,12 +108,6 @@ p{
     color: #e0245e;
 }
 
-.link{
-    color: #657786;
-    margin: 0 3px;
-    font-weight: 100;
-}
-
 .font-color-blue{
     color: #4ab3f4;
 }
@@ -123,7 +116,7 @@ p{
     color: #ffad1f;
 }
 
-.font-color-gray{
+.font-color-gray, .link{
     color: #657786;
 }
 
@@ -148,8 +141,12 @@ p{
     outline: none;
 }
 
-.font-weight-bold{
+.font-weight-bold, a{ 
     font-weight: 600;
+}
+
+.font-weight-thin, .link{
+    font-weight: 100;
 }
 
 .button-tweet:enabled{
@@ -180,6 +177,10 @@ p{
 
 .news{
     padding: 10px;
+}
+
+.link{
+    margin: 0 3px;
 }
 
 .profile-name{
@@ -222,7 +223,7 @@ margin: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    top: 20%;
+    top: 18%;
     position: relative;
 }
 
@@ -237,9 +238,8 @@ margin: 0px;
     left: 32%;
 }
 
-a{
+a {
     font-size: 13px;
-    font-weight: 600;
     text-decoration:none; 
     color: black;
 }
@@ -250,8 +250,8 @@ a{
 
 .article{
     width: 85%;
-margin: 5px;
-padding-top: 5px;
+    margin: 5px;
+    padding-top: 5px;
 }
 
 .new-followers{
