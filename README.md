@@ -7,7 +7,7 @@ Reprodução do Twitter que permite a inserção de mensagens de texto.
 
 ![](twitter-lab.png)
 
-#Features:
+## Features: ##
 
 - Permite que o usuário insira uma mensagem de texto
 - Permite a quebra de linha
@@ -16,5 +16,5 @@ Reprodução do Twitter que permite a inserção de mensagens de texto.
 - Aumento da área de texto na quebra de linha
 - Informa a hora que o `tweet` foi postado
  
-#Extra
+## Extra ##
 - Possui um contador de `tweets`
