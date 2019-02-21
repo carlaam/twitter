@@ -68,7 +68,7 @@ function postTweet() {
 
     link.href = "#";
     linkuser.href = "#tweet"
-    image.src="../img/foto-tweet.png";
+    image.src="img/foto-tweet.png";
 
     link.appendChild(userName);
     linkuser.appendChild(userlink);
