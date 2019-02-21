@@ -1,36 +1,87 @@
-.header{
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
+    font-family: Helvetica, Sans-Serif;
     background-color: #e6ecf0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.header{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  border-bottom: 1px solid #657786;
+}
+
+.tweet-header{
+font-size: 13px;
+display: flex;
+}
+
+.tweet-time{
+    margin-left:3px; 
+    color: #657786;
+    font-size: 13px;
+    font-family: Helvetica, Sans-Serif;
 }
 
 ::placeholder{
     color:#4ab3f4;
 }
 
-.main{
+.list{
+    width: 120px;
+    height: 40px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    list-style-type: none;
+    margin-left: 0;
+    color: #657786;
+}
+
+.profile-list{
+    margin: 2px;
+    height: 50px;
+    width: 70%;
+   
+}
+.main{
+    width: 45%;
 }
 
 .profile{
-    width: 20%;
-    margin-left: 5%;
-    max-height: 40%
+    width: 285px;
+    height: 215px;
+    background-image: url("img/bg_dashboard.png")
+    
+}
+
+.profile-picture{
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 28%;
 }
 
 .central-container{
-    margin-right:auto;
-    width: 40%;
     padding: 10px;
 }
 
 .tweet-box{
-    background-color: #e8f5fd;
+    display: flex;
     padding: 8px;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: space-between;
+    background-color: #e8f5fd;
+    
 }
 
 .input-text {
@@ -39,26 +90,64 @@ body{
     width: 100%;
     resize: none;
     outline: none;
+    overflow: hidden;
+    font-family: Helvetica, Sans-Serif;
+    vertical-align: middle;
+    padding-top: 10px;
+    
 }
-
 
 p{
-    display: flex;
-    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 13px;
+    margin-top: 5px;
 }
 
-div{
+.font-color-red{
+    color: #e0245e;
+}
+
+.link{
+    color: #657786;
+    margin: 0 3px;
+    font-weight: 100;
+}
+
+.font-color-blue{
+    color: #4ab3f4;
+}
+
+.font-color-yellow{
+    color: #ffad1f;
+}
+
+.font-color-gray{
+    color: #657786;
+}
+
+.tweet-style{
+    display: flex;
+    align-items: center;
     background-color: #ffffff;
     margin-bottom: 1px;
-    padding: 5px;
+    padding: 10px;
 }
 
+.profile-picture-tweet{
+    width: auto;
+    border: 3px solid white;
+    border-radius: 50%;
+}
 .button{
-    width: 15%;
+    width: 60px;
     height: 35px;
     border: none;
     border-radius: 30px;
     outline: none;
+}
+
+.button-tweet{
     background-color: #4ab3f4;
     color: #ffffff;
 }
@@ -67,8 +156,115 @@ div{
     display: flex;
     flex-direction: column-reverse;
     margin-top: 10px;
-    /*margin-left: auto;
-    margin-right: auto;
-    width: 40%;*/
 }
 
+.article-news{
+    padding: 0 0 10px 10px;
+}
+
+.side-bar-header{
+    padding: 10px;
+}
+
+.news{
+    padding: 10px;
+}
+
+.profile-name{
+margin: 0px;
+}
+
+.blablabla{
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.aside-left{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin: 10px;
+    margin-left: 10%;
+}
+
+.follow-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aside-right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 10%;
+    width: 330px;
+}
+
+.profile-user{
+    margin:0;
+    color: #657786;
+}
+
+.profile-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 20%;
+    position: relative;
+}
+
+.figure{
+    position: relative;
+    padding: 10px;
+    top: 23%;
+}
+
+.mais-um-div{
+    position: relative;
+    left: 32%;
+}
+
+a{
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration:none; 
+    color: black;
+}
+
+.button-character{
+    margin: 5px;
+}
+
+.article{
+    width: 85%;
+margin: 5px;
+padding-top: 5px;
+}
+
+.new-followers{
+    background-color: #ffffff; 
+    
+}
+
+.follow-button{
+    background-color: #ffffff;
+    border: 0.5px solid #4ab3f4;
+    width: 10vw;
+    margin-left: 5px;
+}
+
+.follow{
+    display: flex;
+    border-bottom: 2px solid #e6ecf0;
+   text-align: center;
+   padding-bottom: 10px;
+
+}
+
+.image-header{
+    width: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}

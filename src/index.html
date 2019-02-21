@@ -5,38 +5,114 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Twitter</title>
+    <link rel="icon" type="image/png" href="img/twitter.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <h3>TWITTER</h3>
+        <div class="image-header">
+            <img class='profile-picture-tweet' src="img/twitter_header.png" alt="">
+        </div>
     </header>
-    <main class="main">
-        <aside class="profile">
-            <figure>
-                <img src="" alt="">
-            </figure>
-            <p>Nome
-                @
-            </p>
-            <ul>
-                <li class="profile-list">Tweets</li>
-                <li class="profile-list">Seguindo</li>
-                <li class="profile-list">Seguidores</li>
-            </ul>
-        </aside>
-        <section class="central-container">
-            <form class="tweet-box">
-                <textarea id="text-tweet" class="input-text" placeholder="O que está acontecendo?"></textarea>
-                <input type="button" id="tweet-button" class="button" value="Tweetar">
-                <span id="counter">140</span>
-            </form>
-            <section id="tweets-section" class="tweets-section">
+    <div class="wrapper">
+        <div class="aside-left">
+            <div class="profile">
+                <div class="figure">
+                    <img class='profile-picture' src="img/perfil-twitter.png" alt="">
+                </div>
+                <div class="mais-um-div">
+                    <h4 class="profile-name">Carla Martins</h4>
+                    <h5 class="profile-user">@carlaam</h5>
+                </div>
+                <div class="profile-control">
+                    <div class="tweets-number">
+                        <h5 class="profile-name font-color-gray">Tweets</h5>
+                        <h4 id="tweet-number" class="profile-name font-color-blue">0</h4>
+                    </div>
+                    <div class="followers-number">
+                        <h5 class="profile-name font-color-gray">Seguidores</h5>
+                        <h4 class="profile-name font-color-blue">252</h4>
+                    </div>
+                    <div class="following-number">
+                        <h5 class="profile-name font-color-gray">Seguindo</h5>
+                        <h4 class="profile-name font-color-blue">487</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="blablabla">
+                <h4 class="side-bar-header">Assuntos para você</h4>
+                <article>
+                    <a class="news font-color-blue" href="#">#GirlPower</a>
+                    <p class="article-news font-color-gray">12,9 mil Tweets</p>
+                </article>
+                <article>
+                    <a class="news font-color-blue" href="#">#MulheresNaTecnologia</a>
+                    <p class="article-news font-color-gray">1.521 Tweets</p>
+                </article>
+                <article>
+                    <a class="news font-color-blue" href="#">#ELENAO</a>
+                    <p class="article-news font-color-gray">66,6 mi Tweets</p>
+                </article>
+            </div>
+        </div>
+
+        <main class="main">
+            <section class="central-container">
+                <form class="tweet-box">
+                    <textarea id="text-tweet" class="input-text" placeholder="O que está acontecendo?"></textarea>
+                    <div class="button-character">
+                        <input type="button" id="tweet-button" class="button button-tweet" value="Tweetar">
+                        <span id="counter" class="font-color-blue">140</span>
+                    </div>
+                </form>
+                <section id="tweets-section" class="tweets-section"></section>
             </section>
-        </section>
-    </main>
+        </main>
+        <aside class="aside-right">
+                <div class="new-followers">
+                    <h4 class="side-bar-header">Quem seguir</h4>
+                    <article class="follow">
+                        <div>
+                            <img class='profile-picture-tweet' src="img/laboratoria.png" alt="">
+                        </div>
+                        <div class="follow-links">
+                            <a class="news" href="https://twitter.com/Laboratoriala">
+                                <h3 class="profile-name">Laboratoria</h3>
+                            </a>
+                            <p class="profile-name font-color-gray">@laboratoriala</p>
+                            <button class="button follow-button font-color-blue">Seguir</button>
+                        </div>
+                    </article>
+                    <article class="follow">
+                        <div>
+                            <img class='profile-picture-tweet' src="img/0SZnA63e_400x400.jpg" alt="">
+                        </div>
+                        <div class="follow-links">
+                            <a class="news" href="https://twitter.com/frontendbr">
+                                <h3 class="profile-name">Front-End BR</h3>
+                            </a>
+                            <p class="profile-name font-color-gray">@frontendbr</p>
+                            <button class="button follow-button font-color-blue">Seguir</button>
+                        </div>
+                    </article>
+                    <article class="follow">
+                        <div>
+                            <img class='profile-picture-tweet' src="img/javascript.png" alt="">
+                        </div>
+                        <div class="follow-links">
+                            <a class="news" href="https://twitter.com/JavaScript">
+                                <h3 class="profile-name">JavaScript</h3>
+                            </a>
+                            <p class="profile-name font-color-gray">@JavaScript</p>
+                            <button class=" button follow-button font-color-blue">Seguir</button>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+    </div>
     <script src="twitter.js"></script>
 </body>
 
